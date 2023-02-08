@@ -1,0 +1,143 @@
+:root {
+  --title: #fffcf9;
+  --subtitle: #b3b3b3;
+  --bg-button: #e9e6e3;
+  --background: linear-gradient(43deg, #102d71 0%, #000000 52%, #c12a23 100%);
+}
+
+body {
+  margin: 0px;
+  padding: 0px 10px ;
+  display: grid;
+  background: var(--background), no-repeat center;
+  justify-content: center;
+  font-family: "Popins";
+}
+
+img {
+  max-width: 100%;
+}
+
+.header {
+  padding: 40px 0px 30px 0px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+.header img {
+  max-height: 60px;
+}
+
+.header h1 {
+  text-align: center;
+  color: #fffcf9;
+  font-weight: 700;
+  font-size: 2.5rem;
+  line-height: 3.75rem;
+}
+
+.main-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  max-width: 1000px;
+  gap: 50px;
+  padding-bottom: 30px;
+}
+
+.filme-nome {
+  font-weight: 700;
+  color: #fffcf9;
+  font-size: 1.25rem;
+  line-height: 1.875;
+}
+
+.descricao {
+  color: #fffcf9;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  max-width: 60ch;
+}
+
+footer {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.shuffle-buttom {
+  justify-content: center;
+}
+
+.shuffle-buttom {
+  display: block;
+  border-radius: 4px;
+  padding: 25px 30px;
+  margin: 0 auto;
+  font-size: 1.125rem;
+  border: 2px solid transparent;
+}
+
+.shuffle-buttom:hover {
+  border: 2px solid blue;
+}
+
+.shuffle-buttom p {
+  margin: 0 auto;
+  padding-left: 30px;
+  position: relative;
+  color: #000000;
+  font-weight: 700;
+  font-size: 0.75rem;
+  line-height: 1.125;
+}
+
+.shuffle-buttom p::before {
+  content: "";
+  position: absolute;
+  height: 26px;
+  width: 36px;
+  background: url(./assets/shuffle-footer.svg), no-repeat, center;
+  top: -5px;
+  left: -15px;
+}
+
+.footer-texto {
+  color: #FFFCF9;
+  font-size: 0.875rem;
+  line-height: 1,3125;
+  font-weight: 400;
+  padding-bottom: 20px;
+}
+
+@media (max-width: 700px) {
+  .header {
+    padding-top: 30px;
+  }
+  .main-container {
+    grid-template-columns: 1fr;
+  }
+  .descricao {
+    font-size: 1.5rem;
+    max-width: initial;
+  }
+  .filme-nome {
+    text-align: center;
+    font-size: 1.75rem;
+  }
+  .filme-thumb {
+    justify-self: center;
+  }
+  .footer-texto {
+    padding: 10px 0px 30px 0px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 450px) {
+  .header h1 {
+    font-size: 1.75rem;
+  }
+}
